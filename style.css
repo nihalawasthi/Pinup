@@ -354,7 +354,17 @@ span {
   height: 200vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;           
+  background-color: #ffffff;
+  background-image:
+  repeating-linear-gradient(
+      to right, transparent 0 100px,
+      #25283b22 100px 101px
+  ),
+  repeating-linear-gradient(
+      to bottom, transparent 0 100px,
+      #25283b22 100px 101px
+  );;
   background: #ffffff;
   color: #000000;
   z-index: 90;
@@ -363,7 +373,78 @@ span {
   top: 100vh;
   transition: top 1s ease-in-out;
 }
-
+/*
+#project::before{
+  position: absolute;
+  width: min(1400px, 90vw);
+  top: 10%;
+  left: 50%;
+  height: 90%;
+  transform: translateX(-50%);
+  content: '';
+  background-image: url(images/bg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  pointer-events: none;
+}
+*/
 #project.slide-up {
   top: 0;
+}
+
+.banner{
+  width: 100%;
+  height: 90vh;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  top: 10%;
+}
+.banner .slider{
+  position: absolute;
+  width: 160px;
+  height: 200px;
+  left: calc(50% - 80px);
+  top: 10%;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 20s linear infinite;
+  z-index: 2;
+}
+@keyframes autoRun{
+  from{
+      transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+  }to{
+      transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+  }
+}
+
+.banner .slider .item{
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: 
+  rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+  translateZ(300px);
+}
+.banner .slider .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .banner .slider{
+      width: 100px;
+      height: 150px;
+      left: calc(50% - 50px);
+  }
+  .banner .slider .item{
+      transform: 
+          rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+          translateZ(180px);
+  }
+  .banner .content h1{
+      font-size: 5em;
+  }
 }

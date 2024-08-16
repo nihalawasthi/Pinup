@@ -18,10 +18,10 @@ const terminal = document.getElementById('terminal');
 
                 switch (command.toLowerCase()) {
                     case 'experience':
-                        window.open("https://www.linkedin.com/in/nihal-awasthi-16a644251");
+                        window.open("https://www.linkedin.com/in/pranav-chaturvedi-1b31a8244");
                         break;
                     case 'contact':
-                        output = '$ <span>Reach me at: nihalawasthi498@gmail.com or visit my <a href="https://www.linkedin.com/in/nihal-awasthi-16a644251">LinkedIn profile.</a></span>';
+                        output = '$ <span>Reach me at: PranavChaturvedi@gmail.com or visit my <a href="https://www.linkedin.com/in/pranav-chaturvedi-1b31a8244">LinkedIn profile.</a></span>';
                         break;
                     case 'pwd':
                         output = '$ <span>pre-final year</span>';
@@ -33,17 +33,17 @@ const terminal = document.getElementById('terminal');
                         output = '$ <span>pwd, ls, whoami, clear, cat, contact, exit, experience</span>';
                         break;
                     case 'cat bio.txt':
-                        output = "$ <span>I'm Nihal Awasthi, a DevSecOps specializing in blockchain analysis, system administration, and reverse engineering.</span>";
+                        output = "$ <span>I'm Pranav Chaturvedi, a DevSecOps specializing in blockchain analysis, system administration, and reverse engineering.</span>";
                         break;
                     case 'whoami':
-                        output = '$ <span>Nihal Awasthi</span>';
+                        output = '$ <span>Pranav Chaturvedi</span>';
                         break;
                     case 'clear':
-                        terminal.innerHTML = '<p>(user㉿Nyx)-[~] $ <span class="input" contenteditable="true"></span></p>';
+                        terminal.innerHTML = '<p>(user㉿HumerousFi)-[~] $ <span class="input" contenteditable="true"></span></p>';
                         terminal.querySelector('.input').focus();
                         return;
                     case 'exit':
-                        terminal.innerHTML = '<p>(user㉿Nyx)-[~] $ <span class="input" contenteditable="true"></span></p>';
+                        terminal.innerHTML = '<p>(user㉿HumerousFi)-[~] $ <span class="input" contenteditable="true"></span></p>';
                         terminal.querySelector('.input').focus();
                         return;
                     default:
@@ -51,7 +51,7 @@ const terminal = document.getElementById('terminal');
                 }
 
                 const commandLine = document.createElement('p');
-                commandLine.innerHTML = `(user㉿Nyx)-[~] $ <span>${command}</span>`;
+                commandLine.innerHTML = `(user㉿HumerousFi)-[~] $ <span>${command}</span>`;
                 terminal.insertBefore(commandLine, input.parentElement);
 
                 if (output) {
