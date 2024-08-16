@@ -5,7 +5,7 @@
 }
 
 body{
-    height: 200vh;
+    height: 300vh;
     width: 100vw;
     overflow-x: hidden;
     background: #000000;
@@ -217,7 +217,6 @@ section{
     }
 }
 
-
 /* about*/
 
 #about {
@@ -235,6 +234,7 @@ section{
 }
 
 #about.slide-up {
+  position: fixed;
   top: 0;
 }
 
@@ -321,4 +321,49 @@ span {
 }
 .yellow {
   background: yellow;
+}
+
+#about .content{
+  position: absolute;
+  bottom: -10vh;
+  right: 30px;
+  height: 90vh;
+}
+
+#img{
+  transform: scale(0.8);
+  width: 30vw;
+  height: 110vh;
+}
+#about .koala-top{
+  position: absolute;
+  height: 50%;
+  top: -80px;
+  right: 0;
+}
+
+#about .koala-bottom{
+  position: absolute;
+  height: 50%;
+  bottom: -80px;
+  left: 0;
+}
+/* project*/
+
+#project {
+  height: 200vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  color: #000000;
+  z-index: 90;
+  width: 100vw;
+  position: fixed;
+  top: 100vh;
+  transition: top 1s ease-in-out;
+}
+
+#project.slide-up {
+  top: 0;
 }
